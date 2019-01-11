@@ -1,0 +1,308 @@
+/*项目介绍页主体*/
+
+.introduce-main-box {
+	width: 100%;
+	height: 2764px;
+	position: relative;
+	overflow: hidden;
+}
+
+.introduce-main-bg {
+	width: 1920px;
+	height: 2764px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -960px;
+	background: url(../img/intriduce-main-bg.png);
+	background-size: 100% 100%;
+}
+
+.introduce-main {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.part {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-top: 80px;
+}
+
+.introduce-title {
+	width: 100%;
+	height: 64px;
+}
+
+.introduce-title span {
+	display: block;
+	width: 100%;
+	height: 58px;
+	line-height: 42px;
+	font-size: 42px;
+	color: #333;
+	text-align: center;
+	padding-bottom: 16px;
+	margin: 0 auto;
+}
+
+.introduce-title>b {
+	width: 101px;
+	height: 6px;
+	background: rgba(255, 158, 16, 1);
+	border-radius: 3px;
+	display: block;
+	margin: 0 auto;
+}
+
+.part1 {
+	width: 100%;
+	height: 1220px;
+}
+
+.part1-pic1 {
+	width: 1920px;
+	height: 422px;
+	position: absolute;
+	left: 50%;
+	top: 314px;
+	margin-left: -960px;
+	background: url(../img/introduce-part1-pic1.png);
+	background-size: 100% 100%;
+}
+
+.part1-content {
+	width: 960px;
+	height: 315px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 10px;
+	margin-top: 720px;
+}
+
+.content-left {
+	width: 462px;
+	height: 315px;
+	float: left;
+}
+
+.content-left>p.p1 {
+	width: 100%;
+	font-size: 42px;
+	line-height: 42px;
+	height: 58px;
+	color: #333;
+}
+.content-left>p.EnglishActive{
+	
+	font-size: 30px;
+	
+}
+
+.content-left>b {
+	display: block;
+	width: 101px;
+	height: 6px;
+	background: rgba(255, 158, 16, 1);
+	border-radius: 3px;
+}
+
+.content-left>p.p2 {
+	line-height: 24px;
+	font-size: 16px;
+	color: #666;
+	padding-top: 32px;
+}
+
+.content-right {
+	width: 469px;
+	height: 315px;
+	background: url(../img/introduce-part1-pic2.png);
+	background-size: 100% 100%;
+	float: left;
+	position: relative;
+}
+
+.part1-text {
+	width: 1210px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -605px;
+}
+
+.part1-text .p1 {
+	position: absolute;
+	color: #333;
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+.part1-text .p1-1 {
+	width: 220px;
+	left: 0;
+	top: 138px;
+	text-align: right;
+}
+
+.part1-text .p1-2 {
+	width: 260px;
+	left: 382px;
+	top: 2px;
+}
+
+.part1-text .p1-3 {
+	width: 320px;
+	left: 436px;
+	top: 222px;
+}
+
+.part1-text .p1-4 {
+	width: 250px;
+	right: 434px;
+	top: 86px;
+	text-align: right;
+}
+
+.part1-text .p1-5 {
+	width: 270px;
+	right: 0;
+	top: 40px;
+}
+
+.part1-text .p1-6 {
+	width: 218px;
+	right: 0;
+	top: 244px;
+}
+
+.part1-text .p2 {
+	position: absolute;
+	color: #666;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.part1-text .p2-1 {
+	width: 220px;
+	left: 0;
+	top: 163px;
+	text-align: right;
+}
+
+.part1-text .p2-2 {
+	width: 260px;
+	left: 382px;
+	top: 28px;
+}
+
+.part1-text .p2-3 {
+	width: 320px;
+	left: 436px;
+	top: 250px;
+}
+
+.part1-text .p2-4 {
+	width: 250px;
+	right: 434px;
+	top: 114px;
+	text-align: right;
+}
+
+.part1-text .p2-5 {
+	width: 270px;
+	right: 0;
+	top: 66px;
+}
+
+.part1-text .p2-6 {
+	width: 218px;
+	right: 0;
+	top: 268px;
+}
+
+.part1 .content-right p {
+	font-size: 18px;
+	width: auto;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	color: #666;
+}
+.part1 .content-right p.EnglishActive {
+	font-size: 14px;
+}
+
+.part1 .content-right p.p1 {
+	top: 44px;
+	left: 12px;
+}
+
+.part1 .content-right p.p2 {
+	top: 38px;
+	left: 364px;
+}
+
+.part1 .content-right p.p3 {
+	top: 249px;
+	left: 30px;
+}
+.part1 .content-right p.p3.EnglishActive {
+	left: -3px;
+}
+
+.part1 .content-right p.p4 {
+	top: 273px;
+	left: 367px;
+}
+
+.part2-pic {
+	width: 919px;
+	height: 587px;
+	margin: 0 auto;
+	margin-top: 34px;
+	background: url(../img/introduce-part2-pic1.png);
+	background-size: 100% 100%;
+	position: relative;
+}
+.part2-pic p{
+	position: absolute;
+	font-size: 22px;
+	color: #666;
+	width: auto;
+	height: 26px;
+	line-height: 26px;
+}
+.part2-pic p.p1{
+	left: 60px;
+	top: 432px;
+}
+.part2-pic p.EnglishActive{
+	font-size: 19px;
+}
+.part2-pic p.p2{
+	left: 756px;
+	top: 432px;
+}
+
+.part3>p {
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	font-size: 16px;
+	color: #595757;
+	margin-top: 39px;
+	margin-bottom: 56px;
+	text-align: center;
+}
+
+.part3-pic {
+	margin: 0 auto;
+	width: 920px;
+	height: 469px;
+	background: url(../img/introduce-part3-pic1.png);
+	background-size: 100% 100%;
+}
