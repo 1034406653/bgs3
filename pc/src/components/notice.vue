@@ -1,6 +1,6 @@
 <template>
 	<div class="notice-page">
-		<div class="header-title"><span>公告</span><b></b></div>
+		<div class="header-title"><span>{{dataListActive.bulletin}}</span><b></b></div>
 		<ul>
 			<li v-for="item in dataListActive.noticeList">
 				<div class="notice-tittle"><span><img src="@/assets/img/notice-icon.png"/>{{item.title}}</span></div>
@@ -24,15 +24,13 @@
 				dataListActive: {},
 				dataListC: {
 					EnglishActive: false,
-					noticeList: [{
-						time: 11111,
-						title: "1465416",
-						content: "145454165"
-					}],
+					noticeList: [],
+					bulletin:"公告",
 				},
 				dataListE: {
 					EnglishActive: true,
 					noticeList: [],
+					bulletin:"Bulletin",
 				}
 			}
 		},

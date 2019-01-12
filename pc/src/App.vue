@@ -11,13 +11,29 @@
 		<router-view :languageType='languageType' />
 		<div class="footer">
 			<div class="footer-contact">
+				<ul class="footer-iocn-list">
+					<li>
+						<a href="https://twitter.com/blockgamesquare"><img src="@/assets/img/footer-icon1.png" style="width: 33px; height: 27px;margin-top: 9px;"/></a>
+						
+					</li>
+					<li>
+						<a href="https://www.facebook.com/blockgame.square"><img src="@/assets/img/footer-icon2.png" style="width: 18px; height: 33px;margin-top: 6px;"/></a>
+						
+					</li>
+					<li>
+						<a href="https://www.weibo.com/blockgamesquare"><img src="@/assets/img/footer-icon3.png"  style="width: 39px; height: 31px;margin-top: 7px;"/></a>
+					</li>
+				</ul>
 				<div class="weixin-qrcode"></div>
 				<span class="weixinlabel">官方微信</span>
 				<span class="dianbaolabel">官方电报群:</span>
 				<p>t.m/blockgamesquare</p>
+				<div class="navFeedBack" @click="$router.push('/feedback')">
+					{{dataListActive.footer.feedback}}
+				</div>
 			</div>
 			<p>
-				<span>Copyright © 2018 BLOCKGAME SQUARE All Right Reserved.</span>
+				<span>本网站所有权属于新加坡庞加莱基金会所有,保留所有权利</span>&nbsp;&nbsp;&nbsp;<span>Copyright © 2018 BLOCKGAME SQUARE All Right Reserved.</span>
 			</p>
 		</div>
 	</div>
@@ -39,7 +55,7 @@
 						introduce: "项目介绍",
 					},
 					footer: {
-
+						feedback:"反馈意见",
 					}
 				},
 				dataListE: {
@@ -48,7 +64,7 @@
 						introduce: "Project Intro",
 					},
 					footer: {
-
+						feedback:"Customer Comment",
 					}
 				}
 			}
