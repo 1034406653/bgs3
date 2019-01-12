@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset=utf-8>
+		<meta name=viewport content="width=device-width,initial-scale=1">
+		<title>区块链游戏广场</title>
+		<link rel="shortcut icon" href=static/logo.ico>
+		<script type="text/javascript">
+						
+			var userAgentInfo = navigator.userAgent;
+			var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone","iPad", "iPod"];
+			var flag = true;
+			for(var v = 0; v < 6; v++) {
+				if(userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				};
+			};
+			if(!flag) {
+				window.location.href = 'phone/index.html'
+				console.log(0)
+			};		
+		</script>
+		<link href=./static/css/app.9a106be61c7d1d56d57b85b66921df48.css rel=stylesheet>
+	</head>
+	<body>
+		<div id=app></div>
+		<script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script>
+		<script type=text/javascript src=./static/js/vendor.071d0e757c932397903c.js></script>
+		<script type=text/javascript src=./static/js/app.d22e70f9f1608913305b.js></script>
+	</body>
+
+</html>
