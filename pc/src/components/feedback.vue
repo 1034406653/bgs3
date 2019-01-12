@@ -22,12 +22,11 @@
 			<textarea v-model="pFeedbackData.details"></textarea>
 			<p><b>{{dataListActive.required}}</b><i>*</i></p>
 		</div>
-		<div class="submitBtn" @click="handleSubmit">
+		<div class="submitBtn" :class='{submitBtnActive}' @click="handleSubmit">
 			{{dataListActive.submit}}
 		</div>
-		<div class="hint-box">
-			<p class="submitHint" v-show='submitHintShow'>{{dataListActive.submitHint}}</p>
-			<p class="submitSuccess" v-show='submitSuccessShow'>{{dataListActive.submitSuccess}}</p>
+		<div class="toast-box" v-show="toastShow">
+			<p v-html='dataListActive.toast'></p>
 		</div>
 	</div>
 </template>
@@ -38,9 +37,9 @@
 		props: ['languageType'],
 		data() {
 			return {
-				timer:null,
-				submitHintShow:false,
-				submitSuccessShow:false,
+				timer: null,
+				submitBtnActive: false,
+				toastShow: false,
 				pFeedbackData: {
 					name: "",
 					mobile: "",
@@ -59,27 +58,22 @@
 					required: "必填",
 					unrequired: "选填",
 					submit: "提交建议",
-					submitHint:"请填写必须的内容",
-					submitSuccess:"提交成功",
+					toast: "提交成功<br />感谢您的反馈意见，<br />我们会尽快处理。",
 				},
 				dataListE: {
 					EnglishActive: true,
-					title: "客户反馈",
-					hintText: "为更好地为您提供服务，如您有任何反馈意见或建议，请通过以下方式发送给我们。我们会仔细阅读您的意见。您的反馈意见会被严格保密。",
-					name: "姓名：",
-					phone: "手机：",
-					theme: "主题：",
-					idear: "意见：",
-					required: "必填",
-					unrequired: "选填",
-					submit: "提交建议",
-					submitHint:"请填写必须的内容",
-					submitSuccess:"提交成功",
+					title: "Customer Comment",
+					hintText: "In order to provide better service for you, please reply any possible feedback or suggests if you have. We’ll take care of it carefully.Your comments will be strictly kept confidential.",
+					name: "Name:",
+					phone: "Phone:",
+					theme: "Comments:",
+					idear: "Subject:",
+					required: "required",
+					unrequired: "optional",
+					submit: "Submit",
+					toast: "提交成功<br />感谢您的反馈意见，<br />我们会尽快处理。",
 				},
 			}
-		},
-		mounted() {
-			
 		},
 		created() {
 			if(this.languageType == 'english') {
@@ -95,39 +89,40 @@
 				} else {
 					this.dataListActive = this.dataListC;
 				}
+			},
+			pFeedbackData: { //深度监听，可监听到对象、数组的变化
+				handler(val, oldVal) {
+					if(val.title.length > 0 && val.details.length > 0) {
+						this.submitBtnActive = true;
+					} else {
+						this.submitBtnActive = false;
+					}
+				},
+				deep: true
 			}
 		},
 		methods: {
 			handleSubmit() {
-				if(this.pFeedbackData.details.length < 1 || this.pFeedbackData.title.length < 1){
-					console.log(this.pFeedbackData.details.length);
-					console.log(this.pFeedbackData.title.length);
-					return this.hintShow();
+				if(this.submitBtnActive) {
+					this.$axios({
+						method: 'post',
+						url: '/api/feedback/addFeedback',
+						params: this.pFeedbackData,
+					}).then(res => {
+						if(res.data.code == 0) {
+							this.successShow();
+						}
+					}).catch(res => {
+						console.log(res)
+					});
 				}
-				console.log(this.pFeedbackData);
-				this.$axios({
-					method: 'post',
-					url: '/api/feedback/addFeedback',
-					params: this.pFeedbackData,
-				}).then(res => {
-					if(res.data.code==0){
-						this.successShow();
-					}
-				}).catch(res => {
-					console.log(res)
-				});
 			},
-			hintShow(){
-				this.submitHintShow=true;
-				this.timer=setTimeout(()=>{
-					this.submitHintShow=false;
-				},3000);
-			},
-			successShow(){
-				this.submitSuccessShow=true;
-				this.timer=setTimeout(()=>{
-					this.submitSuccessShow=false;
-				},3000);
+			successShow() {
+				this.toastShow = true;
+				this.timer = setTimeout(() => {
+					this.toastShow = false;
+					this.$router.push('/home');
+				}, 3000);
 			}
 		}
 	}
@@ -188,15 +183,15 @@
 	
 	.feedback-page .input-box span {
 		float: left;
-		width: 120px;
+		width: 130px;
 		line-height: 48px;
-		font-size: 30px;
+		font-size: 24px;
 		color: rgba(51, 51, 51, 1);
 	}
 	
 	.feedback-page .input-box input {
 		float: left;
-		width: calc(100% - 200px);
+		width: calc(100% - 220px);
 		height: 48px;
 		background: rgba(255, 255, 255, 1);
 		box-shadow: 0px 5px 11px 1px rgba(255, 114, 25, 0.19);
@@ -208,7 +203,7 @@
 	
 	.feedback-page .input-box textarea {
 		float: left;
-		width: calc(100% - 200px);
+		width: calc(100% - 220px);
 		height: 360px;
 		line-height: 28px;
 		background: rgba(255, 255, 255, 1);
@@ -223,7 +218,7 @@
 	
 	.feedback-page .input-box p {
 		float: left;
-		width: 80px;
+		width: 90px;
 		font-size: 16px;
 		line-height: 40px;
 		padding-left: 10px;
@@ -234,36 +229,45 @@
 		color: red;
 		margin-left: 8px;
 	}
-	.hint-box{
+	
+	.hint-box {
 		width: 100%;
 		height: 20px;
 	}
-	.submitHint{
-		width: 100%;
+	
+	.toast-box {
+		width: 290px;
+		height: 180px;
+		font-size: 20px;
+		line-height: 36px;
+		color: white;
+		background: rgba(0, 0, 0, 0.8);
+		border-radius: 10px;
+		position: fixed;
+		top: 180px;
+		left: 50%;
+		margin-left: -145px;
 		text-align: center;
-		color: red;
-		font-size: 18px;
-		line-height: 20px;
+		padding-top: 30px;
 	}
-	.submitSuccess{
-		width: 100%;
-		text-align: center;
-		color: green;
-		font-size: 18px;
-		line-height: 20px;
-	}
+	
 	.submitBtn {
 		width: 180px;
 		margin: 10px auto;
 		text-align: center;
 		margin-bottom: 10px;
 		height: 60px;
-		background: linear-gradient(-90deg, rgba(255, 99, 22, 1), rgba(255, 188, 42, 1));
+		background: linear-gradient(-90deg, #999, #ddd);
 		border-radius: 30px;
 		cursor: pointer;
 		font-weight: 600;
 		color: #fff;
 		font-size: 20px;
 		line-height: 60px;
+	}
+	
+	.submitBtnActive {
+		cursor: pointer;
+		background: linear-gradient(-90deg, rgba(255, 99, 22, 1), rgba(255, 188, 42, 1));
 	}
 </style>
