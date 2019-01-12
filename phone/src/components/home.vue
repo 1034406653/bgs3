@@ -74,7 +74,7 @@
 				dataListC: {
 					EnglishActive: false,
 					page1: {
-						notice: "公告",
+						notice: "",
 						p1: "玩转DAPP从这里开始",
 						p2: "为DAPP而生，有趣，安全，易用的区块链游戏广场",
 						appDownload: "APP下载",
@@ -103,7 +103,7 @@
 				dataListE: {
 					EnglishActive: true,
 					page1: {
-						notice: "notice notice",
+						notice: "",
 						p1: "Starting from here, enjoying DAPP games",
 						p2: "Born for the DAPP, interesting, safe, available DAPP game square",
 						appDownload: "APP Download",
@@ -176,7 +176,6 @@
 					method: 'get',
 					url: '/api/notice/getNotice',
 				}).then(res => {
-					console.log(res);
 					if(res.data.code == 0) {
 						this.dataListC.page1.notice = res.data.data[0].title;
 						this.dataListE.page1.notice = res.data.data[0].english_title;

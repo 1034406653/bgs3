@@ -63,6 +63,19 @@
 			<span class="app-download" @click="navDownload" v-html="dataListActive.appDownload">下载APP</span>
 		</div>
 		<div class="footer">
+			<ul class="footer-iocn-list">
+				<li>
+					<a href="https://twitter.com/blockgamesquare"><img src="@/assets/img/footer-icon1.png" style="width: 33px; height: 27px;margin-top: 9px;" /></a>
+
+				</li>
+				<li>
+					<a href="https://www.facebook.com/blockgame.square"><img src="@/assets/img/footer-icon2.png" style="width: 18px; height: 33px;margin-top: 6px;" /></a>
+
+				</li>
+				<li>
+					<a href="https://www.weibo.com/blockgamesquare"><img src="@/assets/img/footer-icon3.png" style="width: 39px; height: 31px;margin-top: 7px;" /></a>
+				</li>
+			</ul>
 			<div class="footer-contact">
 				<div class="weixin-qrcode"></div>
 				<span class="weixinlabel">{{dataListActive.footerSpan1}}</span>
@@ -104,11 +117,11 @@
 					part2: {
 						title: "BGS代币的分发",
 						p11: "发行量：10亿，总量恒定，永不增发。<br /> 团队激励：20%，即2亿。将用于创始团队激励，持续的BGS <br />平台开发、运营与市值管理等。<br /> 海外公开募集：30%，即3亿。用户是持币即分红模式。<br /> 空投奖励：5%，即0.5亿。是指给推广即分红模式。<br /> 挖矿奖励：45%，即4.5亿。消费即挖矿。采用游戏即分红的<br />模式，采用黄金比例减半衰减机制，挖完为止。",
-						picText:{
-							p1:"挖矿奖励",
-							p2:"团队奖励",
-							p3:"海外公开募资",
-							p4:"空投奖励",
+						picText: {
+							p1: "挖矿奖励",
+							p2: "团队奖励",
+							p3: "海外公开募资",
+							p4: "空投奖励",
 						}
 					},
 					part3: {
@@ -116,11 +129,11 @@
 					},
 					part4: {
 						title: "全球合伙人",
-						p11:"在全世界设立8个超级合伙人，以更快的速度，<br /> 链接全球各地的DAPP开发商。",
+						p11: "在全世界设立8个超级合伙人，以更快的速度，<br /> 链接全球各地的DAPP开发商。",
 					},
-					appDownload:"APP下载",
-					footerSpan1:"官方微信",
-					footerSpan2:"官方电报群:",
+					appDownload: "APP下载",
+					footerSpan1: "官方微信",
+					footerSpan2: "官方电报群:",
 				},
 				dataListE: {
 					EnglishActive: true,
@@ -142,25 +155,25 @@
 					part2: {
 						title: "BGS TOKEN DISTRIBUTION",
 						p11: "Amount of distribution: 1 billion, the amount is constant.Team incentive: 20%, namely 0.2 billion. It will be applied into founding team incentive, constant BGS platform development, operation and market value management, etc <br /> Overseas public offering: 30%, namely 0.3 billion. Once users hold tokens they can join in sharing dividends.Air-drop reward: 5%, namely 0.05 billion. For promotion, and participation in profit.Mining reward: 45%, namely 0.45 billion. Consumption means mining. Adopt the model that game means ",
-						picText:{
-							p1:"Mining reward",
-							p2:"Team incentive",
-							p3:"Overseas public offering",
-							p4:"Air-drop reward",
+						picText: {
+							p1: "Mining reward",
+							p2: "Team incentive",
+							p3: "Overseas public offering",
+							p4: "Air-drop reward",
 						}
 					},
 					part3: {
 						title: "Distribution Platform",
-						p1:"Internet user",
-						p2:"DAPP Developers",
+						p1: "Internet user",
+						p2: "DAPP Developers",
 					},
 					part4: {
 						title: "Global super partners",
-						p11:"8 super partners are established worldwide, thus to link with global DAPP developers faster",
+						p11: "8 super partners are established worldwide, thus to link with global DAPP developers faster",
 					},
-					appDownload:"APP Download",
-					footerSpan1:"官方微信",
-					footerSpan2:"官方电报群:",
+					appDownload: "APP Download",
+					footerSpan1: "官方微信",
+					footerSpan2: "官方电报群:",
 				}
 
 			}
@@ -368,8 +381,8 @@
 				background-size: 100% 100%;
 				position: relative;
 			}
-			.part2-pic1{
-				p{
+			.part2-pic1 {
+				p {
 					position: absolute;
 					width: auto;
 					color: #333;
@@ -378,22 +391,22 @@
 					padding: 0;
 					margin: 0;
 				}
-				p.p1{
+				p.p1 {
 					left: 110px;
 					top: 46px;
 				}
-				p.p2{
+				p.p2 {
 					left: 464px;
 					top: 40px;
 				}
-				p.p3{
+				p.p3 {
 					left: 128px;
 					top: 251px;
 				}
-				p.p3.EnglishActive{
+				p.p3.EnglishActive {
 					left: 60px;
 				}
-				p.p4{
+				p.p4 {
 					left: 468px;
 					top: 274px;
 				}

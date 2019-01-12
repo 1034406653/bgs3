@@ -23,6 +23,19 @@
 			<p class="p4" v-html="dataListActive.p4"></p>
 		</div>
 		<div class="footer">
+			<ul class="footer-iocn-list">
+				<li>
+					<a href="https://twitter.com/blockgamesquare"><img src="@/assets/img/footer-icon1.png" style="width: 33px; height: 27px;margin-top: 9px;" /></a>
+
+				</li>
+				<li>
+					<a href="https://www.facebook.com/blockgame.square"><img src="@/assets/img/footer-icon2.png" style="width: 18px; height: 33px;margin-top: 6px;" /></a>
+
+				</li>
+				<li>
+					<a href="https://www.weibo.com/blockgamesquare"><img src="@/assets/img/footer-icon3.png" style="width: 39px; height: 31px;margin-top: 7px;" /></a>
+				</li>
+			</ul>
 			<div class="footer-contact">
 				<div class="weixin-qrcode"></div>
 				<span class="weixinlabel">{{dataListActive.footerSpan1}}</span>

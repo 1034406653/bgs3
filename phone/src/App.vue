@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<div class="header clearfloat">
-			<div class="logo" @click="navHome"></div>
+			<div class="logo" @click="$router.push('/')"></div>
 			<div class="header-nav">
 				<div class="header-nav-btn-box">
 					<div class="header-nav-btn" @click='isNavBoxShow'></div>
@@ -10,7 +10,7 @@
 				<div  :class="[{EnglishActive:dataListActive.EnglishActive},'nav-box']" v-if="navBoxShow">
 					<b></b>
 					<ul>
-						<li class="navtoIntroduce" @click="navIntroduce">
+						<li class="navtoIntroduce" @click="$router.push('/introduce')">
 							<div class="header-nav-icon header-nav-icon1">
 							</div>
 							<span>{{dataListActive.header.introduce}}</span>
@@ -19,6 +19,11 @@
 							<div class="header-nav-icon header-nav-icon2">
 							</div>
 							<span>{{dataListActive.header.wallet}}</span>
+						</li>
+						<li @click="$router.push('/feedback')">
+							<div class="header-nav-icon header-nav-icon3">
+							</div>
+							<span>{{dataListActive.header.feedback}}</span>
 						</li>
 					</ul>
 				</div>
@@ -41,6 +46,7 @@
 					header: {
 						wallet: "钱包收益",
 						introduce: "项目介绍",
+						feedback: "客户反馈",
 					},
 				},
 				dataListE: {
@@ -48,6 +54,7 @@
 					header: {
 						wallet: "Profit from wallet",
 						introduce: "Project Intro",
+						feedback: "Comment",
 					},
 					
 				}
@@ -63,16 +70,6 @@
 		methods: {
 			isNavBoxShow() {
 				this.navBoxShow = !this.navBoxShow;
-			},
-			navHome() {
-				this.$router.push({
-					path: "/"
-				})
-			},
-			navIntroduce() {
-				this.$router.push({
-					path: "/introduce"
-				})
 			},
 			languageChange() {
 				if(this.languageType == 'chinese') {
@@ -160,7 +157,7 @@
 				ul {
 					width: 100%;
 					padding: 0 12px;
-					height: 120px;
+					height: auto;
 					background: #FF952E;
 					li {
 						width: 100%;
@@ -181,6 +178,10 @@
 						}
 						.header-nav-icon2 {
 							background: url(assets/img/header-nav-icon2.png);
+							background-size: 100% 100%;
+						}
+						.header-nav-icon3 {
+							background: url(assets/img/header-nav-icon3.png);
 							background-size: 100% 100%;
 						}
 						span {
@@ -215,7 +216,7 @@
 	
 	.footer {
 		width: 100%;
-		height: 120px;
+		height: 200px;
 		background: rgba(255, 158, 16, 1);
 		overflow: hidden;
 		.footer-contact {
@@ -225,7 +226,7 @@
 			color: #fff;
 			font-size: 20px;
 			margin: 0 auto;
-			margin-top: 18px;
+			margin-top: 12px;
 			margin-bottom: 12px;
 			.weixin-qrcode {
 				float: left;
@@ -273,5 +274,35 @@
 				margin: 3px;
 			}
 		}
+	}
+	.footer-iocn-list {
+		width: 190px;
+		height: auto;
+		overflow: hidden;
+		margin: 0 auto;
+		margin-top: 26px;
+	}
+	
+	.footer-iocn-list li {
+		float: left;
+		width: 50px;
+		height: 50px;
+		margin-right: 20px;
+	}
+	.footer-iocn-list li:last-child {
+		margin: 0;
+	}
+	.footer-iocn-list li a {
+		float: left;
+		width: 50px;
+		height: 50px;
+		border: 2px solid rgba(255, 255, 255, 1);
+		border-radius: 10px;
+		overflow: hidden;
+		text-align: center;
+	}
+	
+	.footer-iocn-list li img {
+		display: inline-block;
 	}
 </style>

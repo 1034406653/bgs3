@@ -26,11 +26,7 @@
 				dataListActive: {},
 				dataListC: {
 					EnglishActive: false,
-					noticeList: [{
-						time: 11111,
-						title: "1465416",
-						content: "145454165"
-					}],
+					noticeList: [],
 				},
 				dataListE: {
 					EnglishActive: true,
@@ -74,9 +70,6 @@
 							this.dataListE.noticeList[i].title = x.english_title;
 							this.dataListE.noticeList[i].content = x.english_content;
 						})
-						console.log(this.dataListC);
-						console.log(this.dataListE);
-						console.log(this.dataListActive);
 						if(this.languageType == 'english') {
 							this.$set(this.dataListActive, this.dataListE)
 						} else {
