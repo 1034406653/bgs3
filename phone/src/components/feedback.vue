@@ -67,7 +67,7 @@
 					required: "required",
 					unrequired: "optional",
 					submit: "Submit",
-					toast: "提交成功<br />感谢您的反馈意见，<br />我们会尽快处理。",
+					toast: "Thank you for your <br /> feedback. We will deal with <br /> as soon as possible",
 				},
 			}
 		},

@@ -241,8 +241,8 @@
 						.noticeMove {
 							width: auto;
 							text-align: left;
-							animation: noticeMove 3s linear;
-							-webkit-animation: noticeMove 3s linear infinite;
+							animation: noticeMove 5s linear;
+							-webkit-animation: noticeMove 5s linear infinite;
 						}
 					}
 				}
@@ -306,8 +306,8 @@
 					left: 50%;
 					margin-left: -25px;
 					z-index: 100;
-					animation: nextPagemove 5s;
-					-webkit-animation: nextPagemove 5s;
+					animation: nextPagemove 3s infinite;
+					-webkit-animation: nextPagemove 3s infinite;
 					/* Safari 和 Chrome */
 				}
 			}

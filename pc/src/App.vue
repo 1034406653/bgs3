@@ -25,15 +25,15 @@
 					</li>
 				</ul>
 				<div class="weixin-qrcode"></div>
-				<span class="weixinlabel">官方微信</span>
-				<span class="dianbaolabel">官方电报群:</span>
+				<span class="weixinlabel">{{dataListActive.footer.wechat}}</span>
+				<span class="dianbaolabel">{{dataListActive.footer.telegram}}</span>
 				<p>t.m/blockgamesquare</p>
 				<div class="navFeedBack" @click="$router.push('/feedback')">
 					{{dataListActive.footer.feedback}}
 				</div>
 			</div>
 			<p>
-				<span>本网站所有权属于新加坡庞加莱基金会所有,保留所有权利</span>&nbsp;&nbsp;&nbsp;<span>Copyright © 2018 BLOCKGAME SQUARE All Right Reserved.</span>
+				<span>{{dataListActive.footer.bottom}}</span>&nbsp;&nbsp;&nbsp;<span>Copyright © 2018 BLOCKGAME SQUARE All Right Reserved.</span>
 			</p>
 		</div>
 	</div>
@@ -56,6 +56,9 @@
 					},
 					footer: {
 						feedback:"反馈意见",
+						wechat:"官方微信",
+						telegram:"官方电报群:",
+						bottom:"本网站所有权属于新加坡庞加莱基金会所有,保留所有权利",
 					}
 				},
 				dataListE: {
@@ -65,6 +68,9 @@
 					},
 					footer: {
 						feedback:"Customer Comment",
+						wechat:"Wechat",
+						telegram:"Telegram:",
+						bottom:"本网站所有权属于新加坡庞加莱基金会所有,保留所有权利",
 					}
 				}
 			}

@@ -68,8 +68,8 @@
 					EnglishActive: true,
 					p3:"BGS is a game distribution platform which was developed by integrating DAPP based on the mainstream public chain in the market such as ETH and EOS",
 					p4:"Apple Installation Tutorial",
-					footerSpan1:"官方微信",
-					footerSpan2:"官方电报群:",
+					footerSpan1:"Wechat",
+					footerSpan2:"Telegram:",
 				}
 			}
 		},

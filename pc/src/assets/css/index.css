@@ -375,25 +375,25 @@
 
 @keyframes noticeMove {
 	from {
-		transform: translateX(160px);
-		-ms-transform: translateX(-160px);
+		transform: translateX(320px);
+		-ms-transform: translateX(-480px);
 		/* IE 9 */
-		-moz-transform: translateX(160px);
+		-moz-transform: translateX(320px);
 		/* Firefox */
-		-webkit-transform: translateX(160px);
+		-webkit-transform: translateX(320px);
 		/* Safari 和 Chrome */
-		-o-transform: translateX(160px);
+		-o-transform: translateX(320px);
 		/* Opera */
 	}
 	to {
-		transform: translateX(-160px);
-		-ms-transform: translateX(-160px);
+		transform: translateX(-480px);
+		-ms-transform: translateX(-480px);
 		/* IE 9 */
-		-moz-transform: translateX(-160px);
+		-moz-transform: translateX(-480px);
 		/* Firefox */
-		-webkit-transform: translateX(-160px);
+		-webkit-transform: translateX(-480px);
 		/* Safari 和 Chrome */
-		-o-transform: translateX(-160px);
+		-o-transform: translateX(-480px);
 		/* Opera */
 	}
 }
@@ -403,25 +403,25 @@
 
 {
 	from {
-		transform: translateX(160px);
-		-ms-transform: translateX(160px);
+		transform: translateX(320px);
+		-ms-transform: translateX(320px);
 		/* IE 9 */
-		-moz-transform: translateX(160px);
+		-moz-transform: translateX(320px);
 		/* Firefox */
-		-webkit-transform: translateX(160px);
+		-webkit-transform: translateX(320px);
 		/* Safari 和 Chrome */
-		-o-transform: translateX(160px);
+		-o-transform: translateX(320px);
 		/* Opera */
 	}
 	to {
-		transform: translateX(-160px);
-		-ms-transform: translateX(-160px);
+		transform: translateX(-480px);
+		-ms-transform: translateX(-480px);
 		/* IE 9 */
-		-moz-transform: translateX(-160px);
+		-moz-transform: translateX(-480px);
 		/* Firefox */
-		-webkit-transform: translateX(-160px);
+		-webkit-transform: translateX(-480px);
 		/* Safari 和 Chrome */
-		-o-transform: translateX(-160px);
+		-o-transform: translateX(-480px);
 		/* Opera */
 	}
 }
@@ -432,27 +432,27 @@
 {
 	from {
 		{
-			transform: translateX(160px);
-			-ms-transform: translateX(160px);
+			transform: translateX(320px);
+			-ms-transform: translateX(320px);
 			/* IE 9 */
-			-moz-transform: translateX(160px);
+			-moz-transform: translateX(320px);
 			/* Firefox */
-			-webkit-transform: translateX(160px);
+			-webkit-transform: translateX(320px);
 			/* Safari 和 Chrome */
-			-o-transform: translateX(160px);
+			-o-transform: translateX(320px);
 			/* Opera */
 		}
 	}
 	to {
 		{
-			transform: translateX(-160px);
-			-ms-transform: translateX(-160px);
+			transform: translateX(-480px);
+			-ms-transform: translateX(-480px);
 			/* IE 9 */
-			-moz-transform: translateX(-160px);
+			-moz-transform: translateX(-480px);
 			/* Firefox */
-			-webkit-transform: translateX(-160px);
+			-webkit-transform: translateX(-480px);
 			/* Safari 和 Chrome */
-			-o-transform: translateX(-160px);
+			-o-transform: translateX(-480px);
 			/* Opera */
 		}
 	}
@@ -464,26 +464,26 @@
 {
 	from {
 		{
-			transform: translateX(160px);
-			-ms-transform: translateX(160px);
+			transform: translateX(320px);
+			-ms-transform: translateX(320px);
 			/* IE 9 */
-			-moz-transform: translateX(160px);
+			-moz-transform: translateX(320px);
 			/* Firefox */
-			-webkit-transform: translateX(160px);
+			-webkit-transform: translateX(320px);
 			/* Safari 和 Chrome */
-			-o-transform: translateX(160px);
+			-o-transform: translateX(320px);
 			/* Opera */
 		}
 	}
 	to {
-		transform: translateX(-160px);
-		-ms-transform: translateX(-160px);
+		transform: translateX(-480px);
+		-ms-transform: translateX(-480px);
 		/* IE 9 */
-		-moz-transform: translateX(-160px);
+		-moz-transform: translateX(-480px);
 		/* Firefox */
-		-webkit-transform: translateX(-160px);
+		-webkit-transform: translateX(-480px);
 		/* Safari 和 Chrome */
-		-o-transform: translateX(-160px);
+		-o-transform: translateX(-480px);
 		/* Opera */
 	}
 }
@@ -534,6 +534,6 @@
 .noticeMove {
 	width: auto;
 	text-align: left;
-	animation: noticeMove 3s linear;
-	-webkit-animation: noticeMove 3s linear infinite;
+	animation: noticeMove 5s linear;
+	-webkit-animation: noticeMove 5s linear infinite;
 }

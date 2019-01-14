@@ -75,7 +75,7 @@
 
 .part1-content {
 	width: 960px;
-	height: 315px;
+	height: auto;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0 10px;
@@ -84,7 +84,7 @@
 
 .content-left {
 	width: 462px;
-	height: 315px;
+	height: auto;
 	float: left;
 }
 

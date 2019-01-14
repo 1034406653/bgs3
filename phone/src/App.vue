@@ -276,7 +276,7 @@
 		}
 	}
 	.footer-iocn-list {
-		width: 190px;
+		width: 200px;
 		height: auto;
 		overflow: hidden;
 		margin: 0 auto;

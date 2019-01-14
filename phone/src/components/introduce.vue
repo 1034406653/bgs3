@@ -154,7 +154,7 @@
 					},
 					part2: {
 						title: "BGS TOKEN DISTRIBUTION",
-						p11: "Amount of distribution: 1 billion, the amount is constant.Team incentive: 20%, namely 0.2 billion. It will be applied into founding team incentive, constant BGS platform development, operation and market value management, etc <br /> Overseas public offering: 30%, namely 0.3 billion. Once users hold tokens they can join in sharing dividends.Air-drop reward: 5%, namely 0.05 billion. For promotion, and participation in profit.Mining reward: 45%, namely 0.45 billion. Consumption means mining. Adopt the model that game means ",
+						p11: "Amount of distribution: 1 billion, the amount is constant.Team incentive: 20%, namely 0.2 billion. It will be applied into founding team incentive, constant BGS platform development, operation and market value management, etc <br /> Overseas public offering: 30%, namely 0.3 billion. Once users hold tokens they can join in sharing dividends.Air-drop reward: 5%, namely 0.05 billion. For promotion, and participation in profit.Mining reward: 45%, namely 0.45 billion. Consumption means mining. Adopt the model that game means participation in profit, golden ratio halving attenuation mechanism, until it is dug out",
 						picText: {
 							p1: "Mining reward",
 							p2: "Team incentive",
@@ -172,8 +172,8 @@
 						p11: "8 super partners are established worldwide, thus to link with global DAPP developers faster",
 					},
 					appDownload: "APP Download",
-					footerSpan1: "官方微信",
-					footerSpan2: "官方电报群:",
+					footerSpan1: "Wechat",
+					footerSpan2: "Telegram:",
 				}
 
 			}

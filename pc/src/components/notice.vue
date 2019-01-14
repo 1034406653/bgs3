@@ -5,7 +5,7 @@
 			<li v-for="item in dataListActive.noticeList">
 				<div class="notice-tittle"><span><img src="@/assets/img/notice-icon.png"/>{{item.title}}</span></div>
 				<div class="notice-time">
-					<span>{{item.time}}</span><span> | </span> <span>区块链广场</span>
+					<span>{{item.time}}</span><span> | </span> <span>{{dataListActive.blockchain}}</span>
 				</div>
 				<div class="content-box">
 					<div v-html="item.content"></div>
@@ -26,11 +26,14 @@
 					EnglishActive: false,
 					noticeList: [],
 					bulletin:"公告",
+					blockchain:"区块链广场",
+					
 				},
 				dataListE: {
 					EnglishActive: true,
 					noticeList: [],
 					bulletin:"Bulletin",
+					blockchain:"Blockchain square",
 				}
 			}
 		},
