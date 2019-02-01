@@ -18,8 +18,10 @@
 						</a>
 					</li>
 					<li>
-						<div class="ios-icon"></div>
-						<span>IOS</span>
+						<a href="itms-services://?action=download-manifest&url=https://dl.bgsgame.com/main.plist">
+							<div class="ios-icon"></div>
+							<span>IOS</span>
+						</a>
 					</li>
 				</ul>
 				<ul class="book-nav clearfloat">
