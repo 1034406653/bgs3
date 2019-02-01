@@ -84,6 +84,12 @@
 	margin-right: 20px;
 	cursor: pointer;
 }
+.nav-box>ul.download-nav li a{
+	color: #fff;
+	float: left;
+	width: 180px;
+	height: 60px;
+}
 
 .nav-box .android-icon {
 	float: left;

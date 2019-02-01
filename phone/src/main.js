@@ -9,6 +9,7 @@ Es6Promise.polyfill()
 /*axios*/
 import axios from 'axios'
 axios.defaults.baseURL = '/bgs/';
+/*axios.defaults.baseURL = 'http://bgsgame.com/bgs/';*/
 axios.interceptors.request.use(config => {
 	if(config.method === 'post') {
 		let params = config.data || {};

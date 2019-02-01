@@ -12,8 +12,10 @@
 			<div class="nav-box clearfloat">
 				<ul class="download-nav">
 					<li>
-						<div class="android-icon"></div>
-						<span>Android</span>
+						<a href="http://bgsgame.com/bgs.apk">
+							<div class="android-icon"></div>
+							<span>Android</span>
+						</a>
 					</li>
 					<li>
 						<div class="ios-icon"></div>
@@ -213,6 +215,7 @@
 		},
 		methods: {
 			isBookLanguageShow() {
+				
 				this.bookLanguageShow = !this.bookLanguageShow;
 			},
 			init() {
