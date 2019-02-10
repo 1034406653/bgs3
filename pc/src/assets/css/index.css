@@ -83,13 +83,15 @@
 	float: left;
 	margin-right: 20px;
 	cursor: pointer;
+	position: relative;
 }
-.nav-box>ul.download-nav li a{
-	color: #fff;
-	float: left;
-	width: 180px;
-	height: 60px;
+.nav-box>ul.download-nav li img{
+	position: absolute;
+	left: 0;
+	width: 220px;
+	top: 50px;
 }
+
 
 .nav-box .android-icon {
 	float: left;

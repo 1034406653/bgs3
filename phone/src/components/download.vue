@@ -6,7 +6,7 @@
 			<p class="p2">Block Game Square</p>
 			<p class="p3" v-html='dataListActive.p3'></p>
 			<div class="QR-code-box">
-				<img src="../assets/img/footer-6-wx-qrcode.png" />
+				<img src="../assets/img/download-downloadPage.png" />
 			</div>
 			<div class="btn android-btn">
 				<div @click="handleAndroidDownload">

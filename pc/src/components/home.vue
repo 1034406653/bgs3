@@ -11,17 +11,15 @@
 			<div class="title2">{{dataListActive.title2}}</div>
 			<div class="nav-box clearfloat">
 				<ul class="download-nav">
-					<li>
-						<a href="http://bgsgame.com/bgs.apk">
-							<div class="android-icon"></div>
-							<span>Android</span>
-						</a>
+					<li @click="andriodQrcode=!andriodQrcode">
+						<div class="android-icon"></div>
+						<span>Android</span>
+						<img src="@/assets/img/download-download.png" v-if="andriodQrcode" />
 					</li>
-					<li>
-						<a href="itms-services://?action=download-manifest&url=https://dl.bgsgame.com/main.plist">
-							<div class="ios-icon"></div>
-							<span>IOS</span>
-						</a>
+					<li @click="iosQrcode=!iosQrcode">
+						<div class="ios-icon"></div>
+						<span>IOS</span>
+						<img src="@/assets/img/download-download.png"  v-if="iosQrcode" />
 					</li>
 				</ul>
 				<ul class="book-nav clearfloat">
@@ -108,12 +106,12 @@
 		props: ['languageType'],
 		data() {
 			return {
-				noticeMove:false,
+				noticeMove: false,
 				bookLanguageShow: false,
 				dataListActive: {},
 				dataListC: {
 					EnglishActive: false,
-					notice:"",
+					notice: "",
 					title1: '玩转DAPP从这里开始',
 					title2: '为DAPP而生，有趣，安全，易用的区块链游戏广场',
 					bookNav: {
@@ -148,7 +146,7 @@
 				},
 				dataListE: {
 					EnglishActive: true,
-					notice:"",
+					notice: "",
 					title1: 'Starting from here, enjoying DAPP games',
 					title2: 'Born for the DAPP, interesting, safe, available DAPP game square',
 					bookNav: {
@@ -180,7 +178,9 @@
 							p2: "Invest heavily in developing a DAPP, but just barely crosses 100 users? There are millions of Internet users waiting for you",
 						},
 					}
-				}
+				},
+				andriodQrcode:false,
+				iosQrcode:false,
 			}
 		},
 		created() {
@@ -196,7 +196,7 @@
 				}
 			}
 		},
-		mounted(){
+		mounted() {
 			this.init();
 		},
 		watch: {
@@ -205,19 +205,19 @@
 				if(val == 'english') {
 					this.dataListActive = this.dataListE
 					if(this.dataListActive.notice.length > 12) {
-					this.noticeMove = true;
-				}
+						this.noticeMove = true;
+					}
 				} else {
 					this.dataListActive = this.dataListC
 					if(this.dataListActive.notice.length > 6) {
-					his.noticeMove = true;
-				}
+						his.noticeMove = true;
+					}
 				}
 			}
 		},
 		methods: {
 			isBookLanguageShow() {
-				
+
 				this.bookLanguageShow = !this.bookLanguageShow;
 			},
 			init() {
